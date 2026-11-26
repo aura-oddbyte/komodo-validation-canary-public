@@ -1,4 +1,7 @@
-[[stack]]
-name = "aura-validation-canary-public"
+[[procedure]]
+name = "aura-validation-git-proof-public"
 description = "opaque-git-revision-A"
-deploy = false
+[procedure.config]
+schedule_enabled = false
+schedule_alert = false
+webhook_enabled = false
