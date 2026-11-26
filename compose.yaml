@@ -1,0 +1,26 @@
+services:
+  web:
+    image: ttl.sh/678f71a7-684a-4bb4-bd8e-bd7419f5a5e6:1h
+    read_only: true
+    cap_drop: [ALL]
+    ports:
+      - target: 8080
+        published: 18196
+        protocol: tcp
+        mode: ingress
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, "http://127.0.0.1:8080/"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.25'
+          pids: 32
+      restart_policy:
+        condition: any
+      update_config:
+        order: stop-first
+        failure_action: pause

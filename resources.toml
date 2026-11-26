@@ -1,0 +1,4 @@
+[[stack]]
+name = "aura-validation-canary-public"
+description = "opaque-git-revision-A"
+deploy = false
