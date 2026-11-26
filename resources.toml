@@ -1,6 +1,6 @@
 [[procedure]]
 name = "aura-validation-git-proof-public"
-description = "opaque-git-revision-B"
+description = "opaque-git-revision-C-acceptance"
 [procedure.config]
 schedule_enabled = false
 schedule_alert = false
